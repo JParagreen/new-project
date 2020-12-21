@@ -1,59 +1,46 @@
 input.onButtonPressed(Button.A, function () {
-    while (true) {
+    if (true) {
+        while (true) {
+            basic.showLeds(`
+                . . . . .
+                . . # . .
+                . # # # .
+                . . # . .
+                . . . . .
+                `)
+            control.waitMicros(100000)
+            basic.showLeds(`
+                . . # . .
+                . # # # .
+                . . # . .
+                . . . . .
+                . . . . .
+                `)
+            control.waitMicros(100000)
+            basic.showLeds(`
+                . . . . .
+                . . # . .
+                . # # # .
+                . . # . .
+                . . . . .
+                `)
+            control.waitMicros(100000)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . # . .
+                . # # # .
+                . . # . .
+                `)
+            control.waitMicros(100000)
+        }
+    } else if (input.buttonIsPressed(Button.B)) {
         basic.showLeds(`
-            . . . . .
-            . . . . .
+            # . . . #
             . # . # .
-            # . # . #
-            . . . . .
-            `)
-        control.waitMicros(500000)
-        basic.showLeds(`
-            . . . . .
             . . # . .
             . # . # .
             # . . . #
-            . . . . .
-            `)
-        control.waitMicros(500000)
-        basic.showLeds(`
-            . . . . .
-            # . # . #
-            . # . # .
-            . . . . .
-            . . . . .
-            `)
-        control.waitMicros(500000)
-        basic.showLeds(`
-            . # . # .
-            # . # . #
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        control.waitMicros(500000)
-        basic.showLeds(`
-            . # . # .
-            # . . . #
-            . . . . .
-            . . . . .
-            . . # . .
-            `)
-        control.waitMicros(500000)
-        basic.showLeds(`
-            . # . # .
-            . . . . .
-            . . . . .
-            . . . . .
-            # . # . #
-            `)
-        control.waitMicros(500000)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . # . # .
-            # . # . #
             `)
     }
 })
