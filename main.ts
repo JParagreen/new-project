@@ -1,49 +1,3 @@
-input.onButtonPressed(Button.A, function () {
-    if (true) {
-        while (true) {
-            basic.showLeds(`
-                . . . . .
-                . . # . .
-                . # # # .
-                . . # . .
-                . . . . .
-                `)
-            control.waitMicros(100000)
-            basic.showLeds(`
-                . . # . .
-                . # # # .
-                . . # . .
-                . . . . .
-                . . . . .
-                `)
-            control.waitMicros(100000)
-            basic.showLeds(`
-                . . . . .
-                . . # . .
-                . # # # .
-                . . # . .
-                . . . . .
-                `)
-            control.waitMicros(100000)
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . # . .
-                . # # # .
-                . . # . .
-                `)
-            control.waitMicros(100000)
-        }
-    } else if (input.buttonIsPressed(Button.B)) {
-        basic.showLeds(`
-            # . . . #
-            . # . # .
-            . . # . .
-            . # . # .
-            # . . . #
-            `)
-    }
-})
 input.onGesture(Gesture.TiltLeft, function () {
     basic.showLeds(`
         . . . . #
@@ -63,7 +17,40 @@ input.onGesture(Gesture.TiltRight, function () {
         `)
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    basic.clearScreen()
+    while (true) {
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # # .
+            . . # . .
+            . . . . .
+            `)
+        control.waitMicros(100000)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            . . # . .
+            . . . . .
+            . . . . .
+            `)
+        control.waitMicros(100000)
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # # .
+            . . # . .
+            . . . . .
+            `)
+        control.waitMicros(100000)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . # # # .
+            . . # . .
+            `)
+        control.waitMicros(100000)
+    }
 })
 basic.showString("" + (input.temperature()))
 basic.showString("Deg C")
