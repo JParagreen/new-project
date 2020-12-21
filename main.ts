@@ -1,27 +1,61 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . # . # .
-        # . # . #
-        . . . . .
-        `)
-    control.waitMicros(10000000)
-    basic.showLeds(`
-        . . . . .
-        . . # . .
-        . # . # .
-        # . . . #
-        . . . . .
-        `)
-    control.waitMicros(10000000)
-    basic.showLeds(`
-        . . . . .
-        # . # . #
-        . # . # .
-        . . . . .
-        . . . . .
-        `)
+    while (true) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . # . # .
+            # . # . #
+            . . . . .
+            `)
+        control.waitMicros(500000)
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # . # .
+            # . . . #
+            . . . . .
+            `)
+        control.waitMicros(500000)
+        basic.showLeds(`
+            . . . . .
+            # . # . #
+            . # . # .
+            . . . . .
+            . . . . .
+            `)
+        control.waitMicros(500000)
+        basic.showLeds(`
+            . # . # .
+            # . # . #
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        control.waitMicros(500000)
+        basic.showLeds(`
+            . # . # .
+            # . . . #
+            . . . . .
+            . . . . .
+            . . # . .
+            `)
+        control.waitMicros(500000)
+        basic.showLeds(`
+            . # . # .
+            . . . . .
+            . . . . .
+            . . . . .
+            # . # . #
+            `)
+        control.waitMicros(500000)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . # . # .
+            # . # . #
+            `)
+    }
 })
 input.onGesture(Gesture.TiltLeft, function () {
     basic.showLeds(`
@@ -42,7 +76,7 @@ input.onGesture(Gesture.TiltRight, function () {
         `)
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    basic.showIcon(IconNames.StickFigure)
+    basic.clearScreen()
 })
 basic.showString("" + (input.temperature()))
 basic.showString("Deg C")
